@@ -1,0 +1,885 @@
+
+html {
+ box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+/*WRAPPER - SIDE MARGIN IN MAIN SECTION*/
+
+.wrapper {
+	width: 100%;
+	padding: 3em;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, div {
+	font-family: sans-serif;
+}
+
+button {
+	font-family: sans-serif !important;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+header h1 {
+	font-size: 42px;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+
+ /* NAVIGATION */
+
+.navbar {
+	display: flex;
+	position: fixed;
+	min-height: 10vh;
+	width: 100%;
+	background-color: white;
+	top: 0;
+	left: 0;
+	border-bottom: solid 4px black;
+}
+
+/* push entire content down */
+#wrapper{
+  padding-top:10vh;
+}
+
+.title {
+	flex: 1;
+	/*background-color: green;*/
+	padding: 0 2em 0 2em;
+	align-self: center;
+
+}
+
+.title a:link, .title a:visited, .title a:hover, .title a:active{
+	text-decoration: none;
+	color: black;
+}
+
+.title h1 {
+	font-size: 140% !important;
+}
+
+.navigation {
+	flex: 3;
+	list-style: none;
+	/*background-color: red;*/
+	padding: 0 2em 0 2em;
+	align-self: center; /* pushes text into center*/
+
+}
+
+li a:link {
+ 	color: black;
+ 	border-bottom: 0px;
+ 	text-decoration: none;
+ }
+
+ li a:visited {
+ 	color: black;
+ 	border-bottom: 0px solid black;
+ 	padding-bottom: 0px;
+ 	text-decoration: none;
+ }
+
+ li a:hover {
+ 	color: pink;
+ 	border-bottom: 2px solid pink;
+ 	padding-bottom: 3px;
+ 	text-decoration: none;
+ }
+
+ li a:active {
+ 	color: pink;
+ 	border-bottom: 2px solid pink;
+ 	padding-bottom: 3px;
+ 	text-decoration: none;
+ }
+ 
+ /* NAVIGATION TAGS*/
+
+ ul.nav {
+ 	display: flex;
+ 	justify-content: flex-start;
+    padding-inline-start: 0px !important;
+ }
+
+ .nav {
+		list-style: none;
+	}
+
+.nav li {
+	flex: 0 1 auto; /* Default */
+	margin-right: 4em;
+	margin-left: 0;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+ /* HERO AREA*/
+
+.hero {
+	display: flex; /* makes a flexbox of the container*/
+	flex-direction: column; /* as opposed to rows, mobile first*/
+	height: 90vh; /* should stretch to fill the full viewport, eceept some space for the navigation*/
+	flex-direction: column-reverse; /*mobile the image on the right is shown on top*/
+
+}
+
+.hero-left {
+	align-self: center; /* pushes text into center*/
+	flex: 1; /* makes item take up rest of space after other item shrinked to fit content*/
+	padding: 4em 2em 0 2em;
+	/* background-color: blue;*/	  
+	text-align: center;
+}
+
+.hero-right {
+	flex: 1; /* makes item take up rest of space after other item shrinked to fit content*/
+	/*background-color: pink;*/
+	padding: 0 2em 0 2em;
+}
+
+.hero-image {
+	background-image: url("07.png");
+	height: 80%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 8em 3em 3em 3em ;
+}
+
+ /* BUTTON */
+
+.hero-left button {
+	background-color: transparent;
+	padding: 1em 2em;
+	border: 2px solid #000;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+/*WHY SECTION*/
+.test {
+	width: 100%;
+	font-size: 2em;
+	margin: 0 auto;	
+}
+
+.test p {
+	font-family: 'Merriweather', serif;
+
+}
+
+/*STYLE IMAGE GALLERY BOXES*/
+
+.imagegallery div {
+	
+	color: black;
+	font-weight: 700;
+	font-family: 'Merriweather', serif;
+	font-style: italic;
+	padding: 0px;
+	font-size: 100%;
+}
+
+.border {
+	border: 4px solid black;
+	border-radius: 0px;
+}
+
+.imagegallery div:nth-child(3n-2) {
+	color: black;
+	font-size: 1.6em;
+	margin-top: 1.2em;
+	padding: 0.2em 0;
+}
+
+.imagegallery div:nth-child(3n) {
+	color: grey;
+	font-size: 1em;
+	padding: 0.2em;
+}
+
+.imagegallery {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat (5, minmax(5%, auto) minmax(30vh, auto) minmax(5%, auto));
+  grid-column-gap: 20px;
+  grid-row-gap: 5px;
+  background-color: #fff;
+  color: #444;
+}
+
+.a-title {
+/*	grid-area: 1 / 1 / 2 / 2;*/
+
+}
+
+.a {
+/*	grid-area: 2 / 1 / 6 / 2;
+*/	
+	min-height: 30vh;
+	width: 100%;
+	background-image: url("01.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.a-caption {
+/*	grid-area: 6 / 1 / 7 / 2;
+*/	background-color: pink;
+	color: pink;
+}
+
+.b-title {
+/*	grid-area: row-start / col-start / row-end / col-end;
+*/}
+
+.b {
+/*grid-column: 2/3; 
+grid-row:  2/3;*/
+min-height: 30vh;
+	width: 100%;
+background-image: url("06.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.b-caption {
+/*	grid-column: 2/3; 
+	grid-row:  3/4;*/
+}
+
+.c-title {
+/*	grid-column: 2/3; 
+	grid-row:  4/5;*/
+}
+
+.c {
+/*	grid-column: 2/3; 
+	grid-row:  5/6;*/
+	min-height: 30vh;
+	width: 100%;
+	background-image: url("08.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.c-caption {
+/*	grid-column: 2/3; 
+	grid-row:  6/7;*/
+}
+
+.d.title {
+/*	grid-column: 3/4; 
+	grid-row:  1/2;*/
+}
+
+.d {
+/*grid-column: 3/4; 
+grid-row:  2/3;*/
+min-height: 30vh;
+	width: 100%;
+background-image: url("09.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.d-caption {
+/*	grid-column: 3/4; 
+	grid-row:  3/4;*/
+}
+
+.e-title {
+/*	grid-column: 3/4; 
+	grid-row: 4/5;*/
+}
+
+.e {
+/*grid-column: 3/4; 
+grid-row:  5/6;*/
+min-height: 30vh;
+	width: 100%;
+background-image: url("11.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.e-caption {
+/*	grid-column: 3/4; 
+	grid-row:  6/7;*/
+}
+
+
+/*IMAGE GALLERY*/
+
+
+.tracks {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  background-color: #fff;
+  color: #444;
+  margin: 5em 5em;
+
+}
+
+.image1 {
+grid-column: 1; 
+grid-row:  1/2;
+width: 80%;
+/*background-image: url("04.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;*/
+
+}
+
+.blurb1, .blurb2, .blurb3 {
+	margin-bottom: 3em;
+}
+
+
+.header1 {
+grid-column: 1; 
+grid-row:  2/3;
+}
+
+.blurb1 {
+grid-column: 1; 
+grid-row:  3/4;
+}
+
+.image2 {
+grid-column: 1; 
+grid-row:  4/5;
+width: 80%;
+/*background-image: url("02.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;*/
+
+}
+
+.header2 {
+grid-column: 1; 
+grid-row:  5/6;
+}
+
+.blurb2 {
+grid-column: 1; 
+grid-row:  6/7;
+}
+
+.image3 {
+grid-column: 1; 
+grid-row:  7/8;
+width: 80%;
+}
+
+.header3 {
+grid-column: 1; 
+grid-row: 8/9;
+}
+
+ .blurb3{
+grid-column: 1; 
+grid-row: 9/10;
+}
+
+.header1, .header2, .header3 {
+		font-family: sans-serif;
+		font-size: 1.5em;
+		font-weight: bold; 
+}
+
+.one, .two, .three {
+	min-height: 100vh;
+	margin-top: 10vh;
+
+}
+
+/*FOOTER*/
+
+footer {
+	background-color: black;
+	padding: 4em 0;
+}
+
+footer p {
+	width: 40%;
+	margin: 0em auto 1em;
+	text-align: center;
+	color: white;
+}
+
+.credits p:first-child {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+footer a:link {
+	color: pink !important;
+}
+
+footer a:visited {
+	color: pink !important;
+}
+
+.four-flex {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.four img {
+	width: 100%;
+	margin: 3em 0;
+}
+
+.logo-gym, .logo-caption {
+	width: 100%;
+	padding: 0em 2em 0 2em;
+	text-align: center;
+	margin: 0em auto;
+}
+
+.logo-caption p {
+	font-family: 'Merriweather', serif;
+	font-weight: 900; font-style: italic;
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+/************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/
+
+									 /* On Webpages beyond tablet size */
+
+ /************************************************************************************************************/
+ /************************************************************************************************************/
+ /************************************************************************************************************/
+ /************************************************************************************************************/
+ /************************************************************************************************************/
+
+
+@media all and (min-width: 800px) {/* everything larger than tablet has dfferent layout*/
+
+html {
+ box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+header h1 {
+	font-size: 64px;
+}
+
+
+ li a:link {
+ 	color: black;
+ 	border-bottom: 0px;
+ 	text-decoration: none;
+ }
+
+ li a:visited {
+ 	color: black;
+ 	border-bottom: 0px solid black;
+ 	padding-bottom: 0px;
+ 	text-decoration: none;
+ }
+
+ li a:hover {
+ 	color: pink;
+ 	border-bottom: 2px solid pink;
+ 	padding-bottom: 3px;
+ 	text-decoration: none;
+ }
+
+ li a:active {
+ 	color: pink;
+ 	border-bottom: 2px solid pink;
+ 	padding-bottom: 3px;
+ 	text-decoration: none;
+ }
+
+
+.navbar {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	min-height: 10vh;
+	background-color: white;
+	top: 0;
+	left: 0;
+	border-bottom: solid 4px black;
+}
+
+
+/* push entire content down */
+#wrapper{
+  padding-top:10vh;
+}
+
+.title h1 {
+	font-size: 2em;
+}
+.title {
+	flex: 1;
+	padding: 0 2em 0 3em;
+}
+
+.title a:link, .title a:visited, .title a:hover, .title a:active{
+	text-decoration: none;
+	color: black;
+}
+
+.navigation {
+	flex: 1;
+	padding: 0 2em 0 3em;
+}
+	
+ .hero {
+  	flex-direction: row; /* as opposed to column, mobile first*/
+}
+
+ .hero-left {
+  	width: 50vw; /* split screen labout*/
+  	align-self: center; /* pushes text verticall into center*/
+  	padding: 0 2em 0 3em;
+  	text-align: left;
+}
+
+.hero-left p {
+	font-size: 1.5em;
+	margin-bottom: 2em;
+}
+
+.hero-right {
+	width: 50vw; /* split screen labout*/
+	padding: 0 2em 0 2em;
+}
+
+.hero-image {
+	height: 80%;
+	background-image: url("07.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin: 8em 3em 3em 3em ;
+}
+
+/*IMAGE GALLERY*/
+
+/*STYLE IMAGE GALLERY BOXES*/
+
+.imagegallery div {
+	background-color: ;
+	color: black;
+	font-weight: 700;
+	font-family: 'Merriweather', serif;
+	font-style: italic;
+	padding: 0px;
+	font-size: 100%;
+}
+
+.border {
+	border: 4px solid black;
+	border-radius: 0px;
+}
+
+.imagegallery div:nth-child(3n-2) {
+	color: black;
+	font-size: 1.6em;
+	margin-top: 1.2em 0;
+	padding: 1em 0;
+}
+
+.imagegallery div:nth-child(3n) {
+	color: grey;
+	font-size: 1em;
+	padding: 0.2em;
+}
+
+.imagegallery {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(5%, auto) minmax(30vh, auto) minmax(5%, auto) minmax(5%, auto) minmax(30vh, auto) minmax(5%, auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 5px;
+  background-color: #fff;
+  color: #444;
+}
+
+.a-title {
+	grid-area: 1 / 1 / 2 / 2;
+	background-color: pink;
+}
+
+.a {
+	grid-area: 2 / 1 / 6 / 2;
+	background-image: url("01.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.a-caption {
+	grid-area: 6 / 1 / 7 / 2;
+	background-color: pink;
+	color: pink;
+}
+
+.b-title {
+	grid-area: row-start / col-start / row-end / col-end;
+}
+
+.b {
+grid-column: 2/3; 
+grid-row:  2/3;
+background-image: url("06.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.b-caption {
+	grid-column: 2/3; 
+	grid-row:  3/4;
+}
+
+.c-title {
+	grid-column: 2/3; 
+	grid-row:  4/5;
+}
+
+.c {
+	grid-column: 2/3; 
+	grid-row:  5/6;
+	background-image: url("08.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.c-caption {
+	grid-column: 2/3; 
+	grid-row:  6/7;
+}
+
+.d.title {
+	grid-column: 3/4; 
+	grid-row:  1/2;
+}
+
+.d {
+grid-column: 3/4; 
+grid-row:  2/3;
+background-image: url("09.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.d-caption {
+	grid-column: 3/4; 
+	grid-row:  3/4;
+}
+
+.e-title {
+	grid-column: 3/4; 
+	grid-row: 4/5;
+}
+
+.e {
+grid-column: 3/4; 
+grid-row:  5/6;
+background-image: url("11.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.e-caption {
+	grid-column: 3/4; 
+	grid-row:  6/7;
+}
+
+
+
+/*IMAGE GALLERY*/
+
+
+.tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 8em;
+  grid-row-gap: 20px;
+  background-color: #fff;
+  color: #444;
+  margin: 5em 5em;
+
+}
+
+.image1 {
+grid-column: 1; 
+grid-row:  1/2;
+width: 80%;
+/*background-image: url("04.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;*/
+
+}
+
+.header1 {
+grid-column: 1; 
+grid-row:  2/3;
+}
+
+.blurb1 {
+grid-column: 1; 
+grid-row:  3/4;
+}
+
+.image2 {
+grid-column: 2; 
+grid-row:  1/2;
+width: 80%;
+/*background-image: url("02.png");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: contain;*/
+
+}
+
+.header2 {
+grid-column: 2; 
+grid-row:  2/3;
+}
+
+.blurb2 {
+grid-column: 2; 
+grid-row:  3/4;
+}
+
+.image3 {
+grid-column: 3; 
+grid-row:  1/2;
+width: 80%;
+}
+
+.header3 {
+grid-column: 3; 
+grid-row: 2/3;
+}
+
+ .blurb3{
+grid-column: 3; 
+grid-row: 3/4;
+}
+
+.header1, .header2, .header3 {
+		font-family: sans-serif;
+		font-size: 1.5em;
+		font-weight: bold; 
+}
+
+.one, .two, .three, .four {
+	min-height: 100vh;
+	margin-top: 10vh;
+}
+
+.one h1, .two h1, .three h1, .four h1 {
+	color: #fe5b8c;
+}
+
+
+.test {
+	width: 66%;
+	font-size: 4em;
+	margin: 0 auto;	
+}
+.test p {
+font-family: 'Merriweather', serif;
+font-weight: 300;
+font-style: ;
+line-height: 1.4em;
+}
+
+.four-flex {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.four img {
+	width: 50%;
+	margin-bottom: 3em;
+}
+
+.logo-gym, .logo-caption {
+	width: 66%;
+	padding: 0em 2em 0 2em;
+	text-align: center;
+	margin: 0em auto;
+}
+
+.logo-caption p {
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+	font-style: ;
+	font-size: 2em;
+	line-height: 1.6em;
+}
+
+footer {
+	background-color: black;
+	padding: 4em 0;
+}
+
+footer p {
+	width: 40%;
+	margin: 0em auto 1em;
+	text-align: center;
+	color: white;
+}
+
+.credits p:first-child {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+footer a:link {
+	color: pink !important;
+}
+
+footer a:visited {
+	color: pink !important;
+}
